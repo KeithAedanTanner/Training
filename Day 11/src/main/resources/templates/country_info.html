@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http:www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Country Info</title>
+	</head>
+	
+	<body>
+		<tr>
+			<font size="20px"> <td th:text ="${country.countryName}">Country Name</td> </font> <br>
+			The capital is <td th:text ="${country.capitalName}">Capital Name</td>. <br>
+			The population is <td th:text ="${country.population}">Population</td>. <br>
+			<br>
+			<button type="button"> <a th:href="@{/edit/{id}(id=${country.id})}">Edit Population</a> </button>
+			<button type="button"> <a th:href="@{/delete/{id}(id=${country.id})}">Delete</a> </button>
+			<button type="button"> <a th:href="@{/}">Return to List</a> </button>
+		</tr>
+	</body>
+</html>

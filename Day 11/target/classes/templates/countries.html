@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http:www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>List of Countries</title>
+	</head>
+	
+	<body>
+		<tr th:each="country : ${countries}">
+			<a th:href="@{/show_info/{id}(id=${country.id})}"> <td th:text ="${country.countryName}">Country Name</td> </a>
+			<br>
+		</tr> <br>
+		<button type="button"> <a th:href="@{/new}">Add a New Country</a> </button>
+	</body>
+</html>
